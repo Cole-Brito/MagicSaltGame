@@ -1,10 +1,51 @@
-.flex-container {
-  display: flex; /* Activates Flexbox */
-  float: left;
+/* Overall page layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
+/* Game container */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card row */
+#card-1,
+#card-2 {
+  width: 600px;
+}
+
+/* Cards beside each other */
+.card-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Card styling */
 .flex-child {
-  flex: 1; 
   padding: 10px;
   border: 1px solid black;
+  text-align: center;
+}
+
+/* Buttons centered */
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+#higher-btn,
+#lower-btn {
+  margin: 0 10px;
+}
+
+/* Button row */
+.button-row {
+  display: flex;
+  justify-content: center;
 }
