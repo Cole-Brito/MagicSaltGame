@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex; /* Activates Flexbox */
+  float: left;
+}
+
+.flex-child {
+  flex: 1; 
+  padding: 10px;
+  border: 1px solid black;
+}
