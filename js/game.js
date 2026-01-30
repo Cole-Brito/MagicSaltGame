@@ -1,11 +1,13 @@
 /**
  * Author - Cole Brito
  * Date started - 1/28/2026
- * This is for displaying cards in the game
+ * This is for handling the game logic and displaying cards
  */
 const streakElement = document.getElementById("streak-value");
 
 let streak = 0;
+//TODO: Manage the state of the second cards salt visibility
+let isRevealed = false;
 let currentSalt1 = null;
 let currentSalt2 = null;
 
