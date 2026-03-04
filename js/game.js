@@ -6,8 +6,6 @@
 const streakElement = document.getElementById("streak-value");
 
 let streak = 0;
-//TODO: Manage the state of the second cards salt visibility
-let isRevealed = false;
 let currentSalt1 = null;
 let currentSalt2 = null;
 
