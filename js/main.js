@@ -5,7 +5,7 @@
  */
 
 import { fetchCard, fetchSalt } from "./api.js";
-import { displayCard, enableGuessButtons } from "./game.js";
+import { displayCard, enableGuessButtons, disableNextButton, en } from "./game.js";
 
 async function startRound() {
     const card1 = await fetchCard();
@@ -16,6 +16,7 @@ async function startRound() {
 
     displayCard(card1, card2, salt1, salt2);
     enableGuessButtons();
+    disableNextButton();
 }
 
 startRound();

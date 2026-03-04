@@ -42,6 +42,7 @@ export async function fetchSalt(cardName) {
     try {
 
         // formatting for the EDHREC URL
+        // g means replace all instances of whatever character
         const formattedName = cardName
             .toLowerCase()
             .replace(/[^a-z0-9 ]/g, "")
