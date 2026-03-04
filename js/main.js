@@ -2,10 +2,12 @@
  * Author - Cole Brito
  * Date started - 1/28/2026
  * Main entry point for the Game
+ * 
+ * https://cole-brito.github.io/MagicSaltGame/
  */
 
 import { fetchCard, fetchSalt } from "./api.js";
-import { displayCard, enableGuessButtons, disableNextButton, en } from "./game.js";
+import { displayCard, enableGuessButtons, disableNextButton } from "./game.js";
 
 async function startRound() {
     const card1 = await fetchCard();
