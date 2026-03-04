@@ -69,6 +69,7 @@ export function checkIfHigher() {
     }
 
     disableGuessButtons();
+    enableNextButton();
 
     revealSalt2();
     updateStreakDisplay();
@@ -97,6 +98,7 @@ export function checkIfLower() {
     }
 
     disableGuessButtons();
+    enableNextButton();
 
     revealSalt2();
     updateStreakDisplay();
@@ -111,9 +113,14 @@ function updateStreakDisplay() {
 }
 
 function revealSalt2() {
-    const saltElement = document.getElementById("salt-2");
+    const card2Element = document.getElementById('card-2');
+    if (!card2Element || currentSalt2 === null) return;
+
+    const salt2Rounded = currentSalt2.toFixed(3);
+
+    const saltElement = card2Element.querySelector('.salt-value');
     if (saltElement) {
-        saltElement.textContent = `Salt: ${currentSalt2.toFixed(3)}`;
+        saltElement.textContent = `Salt: ${salt2Rounded}`;
     }
 }
 
@@ -135,6 +142,20 @@ function disableGuessButtons() {
 
     higher.disabled = false;
     lower.disabled = false;
+}
+
+export function disableNextButton() {
+    const nextBtn = document.getElementById("next-btn");
+    if (!nextBtn) return;
+
+    nextBtn.disabled = true;
+
+}
+
+export function enableNextButton() {
+    const nextBtn = document.getElementById("next-btn");
+    if (!nextBtn) return;
+    nextBtn.disabled = false;
 }
 
 
