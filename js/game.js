@@ -6,6 +6,7 @@
 const streakElement = document.getElementById("streak-value");
 
 let streak = 0;
+let highestStreak = 0;
 let currentSalt1 = null;
 let currentSalt2 = null;
 
@@ -108,6 +109,21 @@ function updateStreakDisplay() {
     if (streakElement) {
         streakElement.textContent = streak;
     }
+
+    if (streak > highestStreak) {
+        updateHighestStreak();
+    }
+}
+
+// Helper function to update highest streak 
+function updateHighestStreak() {
+    if (streak > highestStreak) {
+        highestStreak = streak;
+        const highestStreakElement = document.getElementById("highest-streak-value");
+        if (highestStreakElement) {
+            highestStreakElement.textContent = highestStreak;
+        }
+    }
 }
 
 function revealSalt2() {
@@ -156,7 +172,13 @@ export function enableNextButton() {
     nextBtn.disabled = false;
 }
 
+const darkBtn = document.getElementById("dark-btn");
 
+darkBtn.addEventListener("click", toggleDarkMode);
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
 
 window.checkIfHigher = checkIfHigher;
 window.checkIfLower = checkIfLower;

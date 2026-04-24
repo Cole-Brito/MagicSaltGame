@@ -27,7 +27,7 @@ export async function fetchCard() {
         const card = {
             name: data.name,
             image: data.image_uris?.normal || null,
-            leagalities: data.legalities.commander
+            leagalities: data.legalities.commander          // TODO: Currently the filtering for commander legal cards isnt working 
         };
 
         console.log(card);
