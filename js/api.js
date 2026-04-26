@@ -26,7 +26,7 @@ export async function fetchCard() {
         // breaking down the json into the needed compoents 
         const card = {
             name: data.name,
-            image: data.image_uris?.normal || null,
+            image: data.image_uris?.png || null,         // add guards for double faced cards 
             leagalities: data.legalities.commander          // TODO: Currently the filtering for commander legal cards isnt working 
         };
 

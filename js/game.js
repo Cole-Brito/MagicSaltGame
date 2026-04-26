@@ -174,11 +174,5 @@ export function enableNextButton() {
 
 const darkBtn = document.getElementById("dark-btn");
 
-darkBtn.addEventListener("click", toggleDarkMode);
-
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-
 window.checkIfHigher = checkIfHigher;
 window.checkIfLower = checkIfLower;
