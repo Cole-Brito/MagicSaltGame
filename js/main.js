@@ -9,16 +9,6 @@
 import { fetchCard, fetchSalt } from "./api.js";
 import { displayCard, enableGuessButtons, disableNextButton } from "./game.js";
 
-// var slider = document.getElementById("myRange");
-// // display element in HTML showing the current slider value
-// var output = document.getElementById("slider-value");
-// output.innerHTML = slider.value;
-
-// // Update the current slider value (each time you drag the slider handle)
-// slider.oninput = function() {
-//     output.innerHTML = this.value;
-// };
-
 async function startRound() {
     const card1 = await fetchCard();
     const salt1 = await fetchSalt(card1.name);
